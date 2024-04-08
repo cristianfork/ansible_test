@@ -3,6 +3,10 @@
 ansible all -m apt -a update_cache=true --become --ask-become-pass
 
 # sudo apt install vim-nox
-ansible all -m apt -a name=vim-nox --become --ask-become-pass
+ansible all -m apt -a "name=vim-nox state=latest" --become --ask-become-pass
 
+# sudo apt upgrade
+..... -a "upgrade=dist" ....
 
+# execute playbook
+ansible-playbook --ask-become-pass install_apache.yml
