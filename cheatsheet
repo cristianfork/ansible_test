@@ -1,0 +1,8 @@
+
+# sudo apt update
+ansible all -m apt -a update_cache=true --become --ask-become-pass
+
+# sudo apt install vim-nox
+ansible all -m apt -a name=vim-nox --become --ask-become-pass
+
+
