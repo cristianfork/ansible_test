@@ -1,3 +1,8 @@
+# shortening the commands
+--key-file and -i as default values in ansible.cfg
+
+# ping and connect to nodes
+ansible all -m ping
 
 # sudo apt update
 ansible all -m apt -a update_cache=true --become --ask-become-pass
